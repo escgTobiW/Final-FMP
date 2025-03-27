@@ -1,10 +1,14 @@
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class countText : MonoBehaviour
 {
 
     public static countText instance;
-    public int totalTeru = 10;
+    public int totalTeru = 9;
+
+    public TMP_Text TextCount;
 
     void Awake()
     {
@@ -40,24 +44,13 @@ public class countText : MonoBehaviour
 
     void Update()
     {
-        
+        TextCount.text = "Left to find: " + totalTeru;
+
+        if (totalTeru <= 0)
+        {
+            TextCount.text = "All found!";
+        }
     }
 
-    /*
-  
-    private void OnGUI()
-    {
-        //read variable from LevelManager singleton
-        int score = LevelManager.instance.GetHighScore();
 
-        string text = "High score: " + score;
-
-        // define debug text area
-        GUI.contentColor = Color.white;
-        GUILayout.BeginArea(new Rect(10f, 10f, 1600f, 1600f));
-        GUILayout.Label($"<size=24>{text}</size>");
-        GUILayout.EndArea();
-    }
-
-    */
 }
