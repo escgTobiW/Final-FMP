@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1742
     height: 931
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Scene
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -69,8 +69,8 @@ MonoBehaviour:
     y: 0
     width: 407
     height: 875
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 76}
+  m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -95,8 +95,8 @@ MonoBehaviour:
     y: 0
     width: 384
     height: 532
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 226}
+  m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -326,7 +326,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/prefabs
+    - Assets
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -336,16 +336,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/prefabs
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\year 2\tobi w\Final FMP
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 0cd80000
-    m_LastClickedID: 55308
-    m_ExpandedIDs: 000000005ed7000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: 24da0000
+    m_LastClickedID: 55844
+    m_ExpandedIDs: 0000000024da000024f2000040f20000de310700e831070000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -374,7 +374,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000005ed70000
+    m_ExpandedIDs: 0000000024da0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -403,7 +403,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000e0ae0000
+    m_ExpandedInstanceIDs: c6230000e0ae0000c4510500
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -420,7 +420,7 @@ MonoBehaviour:
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_TrimLeadingAndTrailingWhitespace: 0
-      m_ClientGUIView: {fileID: 5}
+      m_ClientGUIView: {fileID: 0}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -428,7 +428,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 201}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
@@ -519,21 +519,21 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 251}
-      m_SelectedIDs: 44aaf3ff
-      m_LastClickedID: -808380
-      m_ExpandedIDs: 6a9efafff8faffff5ca60000
+      scrollPos: {x: 0, y: 187}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: fca7feffcadbfeffccdbfeffcedbfeffd0dbfeffe8dbfeffeadbfeffecdbfeffeedbfefffedbfeff00dcfeff08dcfeff0adcfeff1801ffff1a01ffff1c01ffff1e01ffff3601ffff3801ffff3a01ffff3c01ffff0cb1ffffe0e2ffff1eecffff98ecffff8af1fffff8faffff04a70000d8a7000002aa0000d0ab0000e6ab000056ac00004cad0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: SPIRIT 2
-        m_OriginalName: SPIRIT 2
+        m_Name: inside lights
+        m_OriginalName: inside lights
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -796340
+        m_UserData: 42968
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
         m_OriginalEventType: 0
@@ -1126,9 +1126,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 0.2890545, y: 2.5081508, z: 2.856998}
+    m_Target: {x: -1.2227175, y: 2.127742, z: -16.00193}
     speed: 2
-    m_Value: {x: 0.2890545, y: 2.5081508, z: 2.856998}
+    m_Value: {x: -1.2227175, y: 2.127742, z: -16.00193}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1174,13 +1174,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.20590758, y: -0.5615377, z: 0.14630948, w: -0.78819776}
+    m_Target: {x: 0.085906, y: -0.5823739, z: 0.06318021, w: 0.8061934}
     speed: 2
-    m_Value: {x: -0.20586799, y: -0.56142974, z: 0.14628135, w: -0.78804624}
+    m_Value: {x: 0.089805506, y: -0.5783131, z: 0.065382674, w: 0.8082166}
   m_Size:
-    m_Target: 0.5340996
+    m_Target: 2.0366535
     speed: 2
-    m_Value: 0.5340996
+    m_Value: 2.0366535
   m_Ortho:
     m_Target: 0
     speed: 2
