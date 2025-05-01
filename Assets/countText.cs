@@ -6,7 +6,7 @@ public class countText : MonoBehaviour
 {
 
     public static countText instance;
-    public int totalTeru = 9;
+    public int totalTeru = 21;
 
     public TMP_Text TextCount;
 
