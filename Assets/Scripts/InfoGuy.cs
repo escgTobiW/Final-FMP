@@ -11,11 +11,6 @@ public class InfoGuy : MonoBehaviour
 
     public TMP_Text Text;
 
-    public int clickA = 1;
-    public int clickB = 1;
-    public int clickC = 1;
-    public int clickD = 1;
-    public int clickE = 1;
 
     public float wait = 0;
     bool waitTime = false;
@@ -24,6 +19,21 @@ public class InfoGuy : MonoBehaviour
 
     public GameObject konbiniTeru;
     bool konbiniTeruExist = true;
+
+    public GameObject dangoTeru;
+    bool dangoTeruExist = true;
+
+    public GameObject boxTeru;
+    bool boxTeruExist = true;
+
+    public GameObject roofTeru;
+    bool roofTeruExist = true;
+
+    public GameObject hangingTeru;
+    bool hangingTeruExist = true;
+
+    public GameObject eatenTeru;
+    bool eatenTeruExist = true;
 
     void Start()
     {
@@ -43,11 +53,13 @@ public class InfoGuy : MonoBehaviour
         {
             wait += Time.deltaTime;
         }
-         if (waitTime == false)
+
+        if (waitTime == false)
         {
             wait = 0;
         }
 
+        //-------------------------
         if (konbiniTeru.transform.childCount > 0)
         {
             konbiniTeruExist = true;
@@ -56,90 +68,107 @@ public class InfoGuy : MonoBehaviour
         {
             konbiniTeruExist = false;
         }
+        //-------
+        if (dangoTeru.transform.childCount > 0)
+        {
+            dangoTeruExist = true;
+        }
+        else if (dangoTeru.transform.childCount <= 0)
+        {
+            dangoTeruExist = false;
+        }
+        //-------
+        if (boxTeru.transform.childCount > 0)
+        {
+            boxTeruExist = true;
+        }
+        else if (boxTeru.transform.childCount <= 0)
+        {
+            boxTeruExist = false;
+        }
+        //-------
+        if (roofTeru.transform.childCount > 0)
+        {
+            roofTeruExist = true;
+        }
+        else if (roofTeru.transform.childCount <= 0)
+        {
+            roofTeruExist = false;
+        }
+        //-------
+        if (hangingTeru.transform.childCount > 0)
+        {
+            hangingTeruExist = true;
+        }
+        else if (hangingTeru.transform.childCount <= 0)
+        {
+            hangingTeruExist = false;
+        }
+        //-------
+        if (eatenTeru.transform.childCount > 0)
+        {
+            eatenTeruExist = true;
+        }
+        else if (eatenTeru.transform.childCount <= 0)
+        {
+            eatenTeruExist = false;
+        }
+        //-------------------------
+
+        if (wait > 1.5)
+        {
+            giveHint();
+            waitTime = false;
+        }
+
+        //-------------------------
 
         if ((Input.GetMouseButtonDown(1) == true) && (nearPlayer == true))
         {
             anim.SetBool("talk", true);
-            
+
 
             //--------------------------
             if (countText.instance.GetCount() >= 20)
             {
 
-              
                 Text.text = "Still so many to find...";
                 waitTime = true;
 
-                if (wait > 1.5)
-                {
-                    giveHint();
-                    waitTime = false;
-                }
-             
-
-                
             }
             //------------
             if ((countText.instance.GetCount() >= 13) && (countText.instance.GetCount() < 20))
             {
-              
+
                 Text.text = "Getting there...";
 
                 waitTime = true;
-
-                if (wait > 1.5)
-                {
-                    giveHint();
-                    waitTime = false;
-                }
-
             }
             //------------
             if ((countText.instance.GetCount() >= 10) && (countText.instance.GetCount() < 13))
             {
-                
-                    Text.text = "You're over halfway there!";
 
-                    waitTime = true;
+                Text.text = "You're over halfway there!";
 
-                    if (wait > 1.5)
-                    {
-                        giveHint();
-                        waitTime = false;
-                    }
-
+                waitTime = true;
             }
             //------------
             if ((countText.instance.GetCount() >= 5) && (countText.instance.GetCount() < 10))
             {
-                if (clickD == 1)
-                {
-                    Text.text = "Nearly got them all!";
-                    clickD = 2;
-                }
 
-                if (clickD == 2)
-                {
-                    giveHint();
-                    clickD = 1;
-                }
-                
+                Text.text = "Nearly got them all!";
+
+                waitTime = true;
+
             }
             //------------
             if ((countText.instance.GetCount() > 0) && (countText.instance.GetCount() < 5))
             {
-                if (clickE == 1)
-                {
-                    Text.text = "Oh, you're so close...!";
-                    clickE = 2;
-                }
 
-                if (clickE == 2)
-                {
-                    giveHint();
-                    clickE = 1;
-                }
-                
+                Text.text = "Oh, you're so close...!";
+
+                waitTime = true;
+
             }
             //------------
             if (countText.instance.GetCount() == 0)
@@ -174,12 +203,47 @@ public class InfoGuy : MonoBehaviour
 
     private void giveHint()
     {
-    
+        if (dangoTeruExist == true)
+        {
+            Text.text = "Hmmmmm... those dango over there look tasty";
 
-        if (konbiniTeruExist == true)
+        }
+
+        if ((roofTeruExist == true) && (!dangoTeruExist))
+        {
+            Text.text = "I hope none of them got stuck up on top of the stalls... that'd be hard to reach";
+
+        }
+
+        if ((eatenTeruExist == true) && (!dangoTeruExist) && (!roofTeruExist))
+        {
+            Text.text = "Oh...? What...? Uhhhh, someone over there is... eating a Teru Teru Bozu?";
+
+        }
+
+        if ((boxTeruExist == true) && (!dangoTeruExist) && (!roofTeruExist) && (!eatenTeruExist))
+        {
+            Text.text = "So many boxes around... something is bound to get lost among them all";
+
+        }
+
+        if ((hangingTeruExist == true) && (!dangoTeruExist) && (!roofTeruExist) && (!eatenTeruExist) && (!boxTeruExist))
+        {
+           
+            Text.text = "Some of them might have been hung up wrong... too high or upside down?";
+
+        }
+
+        if ((konbiniTeruExist == true) && (!dangoTeruExist) && (!roofTeruExist) && (!eatenTeruExist) && (!boxTeruExist) && (!hangingTeruExist) )
         {
             Text.text = "Maybe try looking in the NightMart?";
-         
+
+        }
+
+        if ((!konbiniTeruExist) && (!dangoTeruExist) && (!roofTeruExist) && (!eatenTeruExist) && (!boxTeruExist) && (!hangingTeruExist))
+        {
+            Text.text = "Where could the last ones be... they have to be lying around somewhere, right?";
+
         }
 
     }
