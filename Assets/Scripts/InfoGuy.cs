@@ -39,6 +39,9 @@ public class InfoGuy : MonoBehaviour
     public GameObject eatenTeru;
     bool eatenTeruExist = true;
 
+    public GameObject lanternTeru;
+    bool lanternTeruExist = true;
+
     void Start()
     {
         Text.text = "  ";
@@ -120,6 +123,15 @@ public class InfoGuy : MonoBehaviour
         else if (eatenTeru.transform.childCount <= 0)
         {
             eatenTeruExist = false;
+        }
+        //-------
+        if (lanternTeru.transform.childCount > 0)
+        {
+            lanternTeruExist = true;
+        }
+        else if (lanternTeru.transform.childCount <= 0)
+        {
+            lanternTeruExist = false;
         }
         //-------------------------
 
@@ -233,7 +245,7 @@ public class InfoGuy : MonoBehaviour
 
         if ((eatenTeruExist == true) && (!dangoTeruExist) && (!roofTeruExist))
         {
-            Text.text = "Oh...? What...? Uhhhh, someone over there is... eating a Teru Teru Bozu?";
+            Text.text = "Oh...? What...? Uhhhh, someone over there is... eating a teru teru bozu?";
 
         }
 
@@ -256,7 +268,13 @@ public class InfoGuy : MonoBehaviour
 
         }
 
-        if ((!konbiniTeruExist) && (!dangoTeruExist) && (!roofTeruExist) && (!eatenTeruExist) && (!boxTeruExist) && (!hangingTeruExist))
+        if ((lanternTeruExist == true) && (!dangoTeruExist) && (!roofTeruExist) && (!eatenTeruExist) && (!boxTeruExist) && (!hangingTeruExist) && (!konbiniTeruExist))
+        {
+            Text.text = "Something about the lighting around here seems odd...";
+
+        }
+
+        if ((!dangoTeruExist) && (!roofTeruExist) && (!eatenTeruExist) && (!boxTeruExist) && (!hangingTeruExist) && (!konbiniTeruExist) && (!lanternTeruExist))
         {
             Text.text = "Where could the last ones be... they have to be lying around somewhere, right?";
 
