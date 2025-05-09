@@ -17,6 +17,10 @@ public class InfoGuy : MonoBehaviour
 
     Animator anim;
 
+    public GameObject player;
+    Vector3 playerPos;
+    Vector3 startLook;
+
     public GameObject konbiniTeru;
     bool konbiniTeruExist = true;
 
@@ -49,6 +53,10 @@ public class InfoGuy : MonoBehaviour
 
     void Update()
     {
+
+        playerPos = new Vector3(player.transform.position.x, 0, player.transform.position.z);
+        startLook = new Vector3(1.75f, 0f, -1f);
+
         if (waitTime == true)
         {
             wait += Time.deltaTime;
@@ -122,11 +130,19 @@ public class InfoGuy : MonoBehaviour
         }
 
         //-------------------------
+        if (nearPlayer == true)
+        {
+            transform.LookAt(playerPos, Vector3.up);
+        }
+        else if (nearPlayer == false)
+        {
+            transform.LookAt(startLook, Vector3.up);
+        }
 
         if ((Input.GetMouseButtonDown(1) == true) && (nearPlayer == true))
         {
             anim.SetBool("talk", true);
-
+            
 
             //--------------------------
             if (countText.instance.GetCount() >= 20)

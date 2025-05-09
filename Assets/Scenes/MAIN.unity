@@ -93,7 +93,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: c5c9b057f82e9f6478e03ec55fbd70c5, type: 2}
+  m_LightingDataAsset: {fileID: 112000000, guid: 8c2d2dfc1d8847243b475ba14a7d03a4, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 501ff155aec1a1b46b793cc8bfd06b49, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -2367,7 +2367,7 @@ Transform:
   m_GameObject: {fileID: 90420666}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.4891, y: 0.54608, z: -4.2047}
+  m_LocalPosition: {x: 2.67, y: 0.54608, z: 5.722}
   m_LocalScale: {x: 0.2567172, y: 0.5632236, z: 0.2567172}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -48115,7 +48115,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7308602149488324236, guid: 0c56b33a65b92124bb38ab15d6928017, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.010000229
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7308602149488324236, guid: 0c56b33a65b92124bb38ab15d6928017, type: 3}
       propertyPath: m_LocalPosition.z
@@ -48157,6 +48157,10 @@ PrefabInstance:
       propertyPath: Text
       value: 
       objectReference: {fileID: 1262778626}
+    - target: {fileID: 9112313651105348884, guid: 0c56b33a65b92124bb38ab15d6928017, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 90420666}
     - target: {fileID: 9112313651105348884, guid: 0c56b33a65b92124bb38ab15d6928017, type: 3}
       propertyPath: boxTeru
       value: 

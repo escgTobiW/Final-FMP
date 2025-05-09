@@ -27,7 +27,7 @@ public class IntroText : MonoBehaviour
 
         if (count == 1)
         {
-            Text.text = " The Night Market should be opening soon...";
+            Text.text = "The Night Market should be opening soon...";
         }
 
         if (count == 2)
@@ -43,7 +43,7 @@ public class IntroText : MonoBehaviour
         if (count == 4)
         {
             Teru.enabled = true;
-            Text.text = "Find the Teru Teru Bozu that have been lost around the market...";
+            Text.text = "Find the teru teru bozu that have been lost around the market...";
         }
 
         if (count == 5)
@@ -54,7 +54,7 @@ public class IntroText : MonoBehaviour
 
         if (count == 6)
         {
-            SceneManager.LoadScene("MAIN");
+            SceneManager.LoadScene("BEGIN");
 
         }
        
