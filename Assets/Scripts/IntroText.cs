@@ -11,7 +11,8 @@ public class IntroText : MonoBehaviour
     int count = 0;
 
     public Image Teru;
-    
+
+    public GameObject ContinueText;
 
     void Start()
     {
@@ -20,13 +21,14 @@ public class IntroText : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(1) == true)
+        if (Input.GetKeyDown(KeyCode.Return) == true)
         {
             count++;
         }
 
         if (count == 1)
         {
+            ContinueText.SetActive(false);
             Text.text = "The Night Market should be opening soon...";
         }
 

@@ -8,8 +8,9 @@ public class TitleToMenu : MonoBehaviour
 {
 
     Animator anim;
-
-    public Image Logo;
+    
+    public GameObject Logo;
+    public GameObject ContinueText;
 
     public GameObject Buttons;
 
@@ -39,9 +40,10 @@ public class TitleToMenu : MonoBehaviour
             wait = 0;
         }
 
-        if (Input.GetMouseButtonDown(1) == true)
+        if (Input.GetKeyDown(KeyCode.Return) == true)
         {
-            Logo.enabled = false;
+            Logo.SetActive(false);
+            ContinueText.SetActive(false);
             anim.SetBool("move", true);
             waitTime = true;
 

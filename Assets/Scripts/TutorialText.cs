@@ -11,6 +11,8 @@ public class TutorialText : MonoBehaviour
     public TMP_Text Text;
     int count = 0;
 
+    public GameObject ContinueText;
+
     Animator anim;
 
     void Start()
@@ -25,7 +27,7 @@ public class TutorialText : MonoBehaviour
     {
 
 
-        if (Input.GetMouseButtonDown(1) == true)
+        if (Input.GetKeyDown(KeyCode.Return) == true)
         {
             count++;
             anim.SetBool("talk", true);
@@ -33,6 +35,7 @@ public class TutorialText : MonoBehaviour
 
         if (count == 1)
         {
+            ContinueText.SetActive(false);
             Text.text = "Thank you for agreeing to help out!";
         }
 
