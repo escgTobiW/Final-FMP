@@ -56,7 +56,7 @@ public class TutorialText : MonoBehaviour
 
         if (count == 5)
         {
-            Text.text = "This button can also be used to interact with other objects and people";
+            Text.text = "This button can also be used to interact with me!";
 
         }
 

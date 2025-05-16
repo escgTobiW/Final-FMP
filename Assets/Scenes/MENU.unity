@@ -2906,7 +2906,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: explain the controls here
+  m_text: 'Move: WASD or Arrow Keys
+
+
+
+    Jump: Space Bar
+
+
+
+    Interact: Right
+    Mouse Button'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2195eae5621993642a0a09ffa257eaaf, type: 2}
   m_sharedMaterial: {fileID: 8297700287290223839, guid: 2195eae5621993642a0a09ffa257eaaf, type: 2}
@@ -2971,7 +2980,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -0.09165954, w: 0}
+  m_margin: {x: -53.90484, y: 0, z: -65.862206, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
