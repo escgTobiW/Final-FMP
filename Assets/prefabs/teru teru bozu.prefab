@@ -121,6 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nearPlayer: 0
+  Confetti: {fileID: 3434137174765930610}
 --- !u!4 &8056959421175329750 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1be598d7e39bba348b717948c36c86e4, type: 3}
@@ -180,13 +181,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4883579245758259267, guid: d5b0ef28229aa2f44b5b95de33d025fc, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5b0ef28229aa2f44b5b95de33d025fc, type: 3}
+--- !u!1 &3434137174765930610 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4883579245758259267, guid: d5b0ef28229aa2f44b5b95de33d025fc, type: 3}
+  m_PrefabInstance: {fileID: 7813029450421315633}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7158223022492426144 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1097304952678135697, guid: d5b0ef28229aa2f44b5b95de33d025fc, type: 3}
