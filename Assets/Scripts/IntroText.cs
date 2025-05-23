@@ -24,6 +24,7 @@ public class IntroText : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Return) == true)
         {
             count++;
+            Object.FindFirstObjectByType<AudioManagerScript>().Play("click");
         }
 
         if (count == 1)

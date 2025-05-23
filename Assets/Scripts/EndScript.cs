@@ -3,30 +3,20 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-
-public class TitleToMenu : MonoBehaviour
+public class EndScript : MonoBehaviour
 {
-
-    Animator anim;
-    
-    public GameObject Logo;
     public GameObject ContinueText;
-
-    public GameObject Buttons;
-
 
     public float wait = 0;
     bool waitTime = false;
 
-
-
     void Start()
     {
-        anim = GetComponent<Animator>();
-        Buttons.SetActive(false);
+        ContinueText.SetActive(false);
+        waitTime = true;
     }
 
-    
+
     void Update()
     {
 
@@ -40,21 +30,18 @@ public class TitleToMenu : MonoBehaviour
             wait = 0;
         }
 
-        if (Input.GetKeyDown(KeyCode.Return) == true)
+        
+
+        if (Input.GetKeyDown(KeyCode.Return) && (wait > 2) == true)
         {
             Object.FindFirstObjectByType<AudioManagerScript>().Play("click");
-            Logo.SetActive(false);
-            ContinueText.SetActive(false);
-            anim.SetBool("move", true);
-            waitTime = true;
-
+            SceneManager.LoadScene("MENU");
         }
 
-        if (wait > 4)
+        if (wait > 2)
         {
-            Buttons.SetActive(true);
-            waitTime = false;
+            ContinueText.SetActive(true);
+            
         }
-
     }
 }

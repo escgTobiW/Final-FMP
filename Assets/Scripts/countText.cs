@@ -1,6 +1,8 @@
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
+using Unity.VisualScripting;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class countText : MonoBehaviour
 {
@@ -10,6 +12,9 @@ public class countText : MonoBehaviour
 
     public TMP_Text TextCount;
 
+
+    public float wait = 0;
+    bool waitTime = false;
     void Awake()
     {
         if (instance == null)
@@ -40,16 +45,37 @@ public class countText : MonoBehaviour
     {
         
     }
-    
+
 
     void Update()
     {
+
+        if (waitTime == true)
+        {
+            wait += Time.deltaTime;
+        }
+
+        if (waitTime == false)
+        {
+            wait = 0;
+        }
+
         TextCount.text = "Left to find: " + totalTeru;
 
         if (totalTeru <= 0)
         {
+
             TextCount.text = "All found!";
+            waitTime = true;
         }
+
+        if (wait > 3)
+        {
+            Object.FindFirstObjectByType<AudioManagerScript>().Play("click");
+            SceneManager.LoadScene("END");
+
+        }
+        
     }
 
 

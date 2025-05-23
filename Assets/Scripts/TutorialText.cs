@@ -31,6 +31,7 @@ public class TutorialText : MonoBehaviour
         {
             count++;
             anim.SetBool("talk", true);
+            Object.FindFirstObjectByType<AudioManagerScript>().Play("click");
         }
 
         if (count == 1)

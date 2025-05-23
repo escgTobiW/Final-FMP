@@ -37,13 +37,13 @@ public class UIScript : MonoBehaviour
 
     public void Play()
     {
-        //Object.FindFirstObjectByType<AudioManagerScript>().Play("press");
+        Object.FindFirstObjectByType<AudioManagerScript>().Play("press");
         SceneManager.LoadScene("START");
     }
 
     public void OptionMenu()
     {
-        //Object.FindFirstObjectByType<AudioManagerScript>().Play("press");
+        Object.FindFirstObjectByType<AudioManagerScript>().Play("press");
         Options.SetActive(true);
         Audio.SetActive(false);
         Controls.SetActive(false);
@@ -52,29 +52,29 @@ public class UIScript : MonoBehaviour
 
     public void AudioMenu()
     {
-        //Object.FindFirstObjectByType<AudioManagerScript>().Play("press");
+        Object.FindFirstObjectByType<AudioManagerScript>().Play("press");
         Audio.SetActive(true);
         Options.SetActive(false);
     }
 
     public void ControlsMenu()
     {
-        //Object.FindFirstObjectByType<AudioManagerScript>().Play("press");
+        Object.FindFirstObjectByType<AudioManagerScript>().Play("press");
         Controls.SetActive(true);
         Options.SetActive(false);
     }
     public void MainMenu()
     {
-        //Object.FindFirstObjectByType<AudioManagerScript>().Play("press");
+        Object.FindFirstObjectByType<AudioManagerScript>().Play("press");
         Options.SetActive(false);
         Main.SetActive(true);
     }
 
     public void Quit()
     {
-        //Object.FindFirstObjectByType<AudioManagerScript>().Play("press");
-        //Application.Quit();
-        UnityEditor.EditorApplication.isPlaying = false;
+        Object.FindFirstObjectByType<AudioManagerScript>().Play("press");
+        Application.Quit();
+        //UnityEditor.EditorApplication.isPlaying = false;
     }
 
 
